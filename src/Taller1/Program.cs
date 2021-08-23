@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Taller1.Soluciones;
 
 namespace Taller1
@@ -8,7 +9,8 @@ namespace Taller1
         static void Main(string[] args)
         {
             Console.WriteLine("selecione el ejerccio que desea resolver");
-            int num = Convert.ToInt32(Console.ReadLine());
+            int num = Convert.ToInt32(Console.ReadLine(),
+                CultureInfo.InvariantCulture);
 
             switch (num)
             {

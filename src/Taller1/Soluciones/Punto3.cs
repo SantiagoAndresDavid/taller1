@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Taller1.Soluciones
 {
@@ -9,11 +10,14 @@ namespace Taller1.Soluciones
             Console.WriteLine("cual es el nombre del usuario: ");
             string nombre = Console.ReadLine();
             Console.WriteLine("numero de cuenta: ");
-            int nuneroCuenta = Convert.ToInt32(Console.ReadLine());
+            int nuneroCuenta = Convert.ToInt32(Console.ReadLine(),
+                CultureInfo.InvariantCulture);
             Console.WriteLine("ingrese el saldo de apertura: ");
-            int saldo = Convert.ToInt32(Console.ReadLine());
+            int saldo = Convert.ToInt32(Console.ReadLine(),
+                CultureInfo.InvariantCulture);
             Console.WriteLine("desea 1.abonar o 2.retirar: ");
-            int opcion = Convert.ToInt32(Console.ReadLine());
+            int opcion = Convert.ToInt32(Console.ReadLine(),
+                CultureInfo.InvariantCulture);
 
             switch (opcion)
             {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Taller1.Soluciones
 {
@@ -7,11 +8,14 @@ namespace Taller1.Soluciones
         public string Solucion()
         {
             Console.Write("ingrese la primera nota: ");
-            int primeraNota = Convert.ToInt32(Console.ReadLine());
+            int primeraNota = Convert.ToInt32(Console.ReadLine(),
+                CultureInfo.InvariantCulture);
             Console.Write("Ingrese la segunda nota: ");
-            int segundaNota = Convert.ToInt32(Console.ReadLine());
+            int segundaNota = Convert.ToInt32(Console.ReadLine(),
+                CultureInfo.InvariantCulture);
             Console.Write("Ingrese la tercera nota: ");
-            int terceraNota = Convert.ToInt32(Console.ReadLine());
+            int terceraNota = Convert.ToInt32(Console.ReadLine(),
+                CultureInfo.InvariantCulture);
 
             if ((primeraNota + segundaNota + terceraNota) / 3 >= 3)
             {

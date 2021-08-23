@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Taller1.Soluciones
 {
@@ -9,7 +10,8 @@ namespace Taller1.Soluciones
             Console.Write("es hombre o mujer: ");
             string sexo = Console.ReadLine();
             Console.Write("cual es la edad: ");
-            int edad = Convert.ToInt32(Console.ReadLine());
+            int edad = Convert.ToInt32(Console.ReadLine(),
+                CultureInfo.InvariantCulture);
 
             if (sexo.ToLower().Equals("hombre"))
             {
